@@ -1,6 +1,7 @@
 global.startTime = Date.now();
 
 require("./global_modules/ms");
+require("./DB/mongo.connect.js");
 
 const express = require('express');
 const app = express();
