@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   res.json({
     status: "🟢 | GOOD",
     DB: {
-      connected: global.isMongoConnected || False
+      connected: global.isMongoConnected || false
     },
     uptime: 0
   });
