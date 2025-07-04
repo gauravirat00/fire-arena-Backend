@@ -2,14 +2,19 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+const statusRoute = require("./routes/status");
+
+
 app.use(express.json());
+
+app.use("/status", statusRoute);
 
 app.get('/', (req, res) => {
   res.send('Hello, Express!');
 });
 
 
-app.get("/status", async(req, res) => {
+app.get("/demo/status", async(req, res) => {
   var randomBool = Math.random() < 0.5;
 
   if(randomBool) {
