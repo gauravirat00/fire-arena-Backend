@@ -1,4 +1,5 @@
 global.startTime = Date.now();
+require('./others/get_cpu.js');
 
 require("./global_modules/ms");
 require("./DB/mongo.connect.js");
