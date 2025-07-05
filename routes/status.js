@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
     uptime,
     usage: {
       ram: ramusage || null,
-      cpu: global.cpu_usage ||  null;
+      cpu: global.cpu_usage ||  null
     }
   });
 });
