@@ -21,18 +21,14 @@ app.get('/', (req, res) => {
 });
 
 
-app.get("/demo/status", async(req, res) => {
-  var randomBool = Math.random() < 0.5;
-
-  if(randomBool) {
+app.get("/dummy/profile", async(req, res) => {
   res.json({
-    status: "🔴 | UNHEALTHY"
+    login: true,
+    email: "demo@fire.arena",
+    name: "Demo",
+    id: 0,
+    isAdmin: false
   });
-  } else {
-  res.json({
-    status: "🟢 | GOOD"
-  });
-}
 });
 
 app.use((err, req, res, next) => {
