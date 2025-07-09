@@ -5,12 +5,13 @@ require("./global_modules/ms");
 require("./DB/mongo.connect.js");
 
 const express = require('express');
+const cors = require('cors')
 const app = express();
 const PORT = 3000;
 
 const statusRoute = require("./routes/status");
 
-
+app.use(cors());
 app.use(express.json());
 
 app.use("/status", statusRoute);
